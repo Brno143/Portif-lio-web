@@ -10,13 +10,12 @@ O projeto é composto por três páginas principais:
 
 1. **Página Inicial (`index.html`)**:
    - Apresentação pessoal.
-   - Botão interativo que altera a cor de fundo da página (feito em JavaScript).
 
 2. **Página Sobre Mim (`about.html`)**:
    - Informações sobre minha carreira, interesses e hobbies.
 
 3. **Página de Projetos (`projects.html`)**:
-   - Lista de projetos com links para repositórios no GitHub.
+   - Lista de projetos.
 
 ---
 
