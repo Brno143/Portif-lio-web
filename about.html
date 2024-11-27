@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mim - Meu Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+        .contact-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1530c5;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .contact-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .contact-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-bar i {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,12 +50,48 @@
     <main>
         <section>
             <h2>Mini Bio</h2>
-            <p>Na minha infância sempre gostei de computadores e tecnologia e sempre tive curiosidade de como são feitas os avanços no mundo digital. Desde então sempre foi meu sonho estudar nessa área de tecnologia.<br>
+            <p id="bio-text" style="display: none;">
+                Na minha infância sempre gostei de computadores e tecnologia e sempre tive curiosidade de como são feitos os avanços no mundo digital. Desde então sempre foi meu sonho estudar nessa área de tecnologia.<br>
                 <br>
                 Hoje sou estudante do primeiro período de ciências da computação na Cesar School.<br>
                 <br>
-                Estou buscando sempre melhorar e aprender mais sobre essa área e tenho interesse principalmente em Inteligência artificial e Cyber Segurança.</p>
+                Estou buscando sempre melhorar e aprender mais sobre essa área e tenho interesse principalmente em Inteligência Artificial e Cyber Segurança.
+            </p>
+            <button id="toggle-bio-btn">Mostrar Mini Bio</button>
         </section>
     </main>
+    
+    
+    <div class="contact-bar">
+        <a href="https://www.linkedin.com/in/bruno-holanda-502aa9339/" target="_blank">
+            <i class="fab fa-linkedin"></i>LinkedIn
+        </a>
+        <a href="https://www.instagram.com/bruno.holanda._/" target="_blank">
+            <i class="fab fa-instagram"></i>Instagram
+        </a>
+        <a href="https://github.com/Brno143" target="_blank">
+            <i class="fab fa-github"></i>GitHub
+        </a>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const bioText = document.getElementById("bio-text");
+            const toggleButton = document.getElementById("toggle-bio-btn");
+
+            toggleButton.addEventListener("click", () => {
+                if (bioText.style.display === "none") {
+                    bioText.style.display = "block";
+                    toggleButton.textContent = "Esconder Mini Bio";
+                } else {
+                    bioText.style.display = "none";
+                    toggleButton.textContent = "Mostrar Mini Bio";
+                }
+            });
+        });
+    </script>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

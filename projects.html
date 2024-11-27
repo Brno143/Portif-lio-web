@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - Meu Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+        .contact-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1530c5;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .contact-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .contact-bar a:hover {
+            color: #ffd700;
+        }
+
+        .contact-bar a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,31 +51,54 @@
     </header>
     <main>
         <section>
-            <h2>Pagina do projeto desenvolvido na materia Projetos 1</h2>
+            <h2>Página do projeto desenvolvido na matéria Projetos 1</h2>
             <ul>
                 <li>
                     <h3>ÁRVORE DE EMOÇÕES!🌲</h3>
-                    <p><br>
+                    <p>
                         A árvore é uma representação da sociedade, 
                         nela estão dispostas flores de LED que simbolizam os indivíduos e a mudança das cores das LEDs 
                         traduz a pluralidade de emoções presentes no espaço. 
                         O jogo funciona de maneira que o usuário tem dois modos de interação:
-                         solo e cooperativo. No modo solo consta no display LCD a pergunta 
-                         "como você está se sentindo hoje?" e é apresentado um termômetro emocional 
-                         com emojis representando as principais emoções, ao clicar nos botões 
-                         correspondentes a árvore fornece um feedback visual 
-                         iluminando desde a base do tronco, seguindo pelo galhos até chegar 
-                         em uma das flores de LED na copa da árvore representando o 
-                         espectro atual do usuário. Todo o trajeto percorrido pela 
-                         luz constitui o cultivar daquele sentimento. O modo cooperativo é 
-                         construído de forma simultânea a partir da soma das respostas emocionais, 
-                         permanecendo acesas as últimas 10 emoções captadas pela árvore. 
-                         Os dados também serão armazenados para posterior análise do 
-                         termômetro emocional e comparação com a mudança de localização da árvore.
+                        solo e cooperativo. No modo solo consta no display LCD a pergunta 
+                        "como você está se sentindo hoje?" e é apresentado um termômetro emocional 
+                        com emojis representando as principais emoções, ao clicar nos botões 
+                        correspondentes a árvore fornece um feedback visual 
+                        iluminando desde a base do tronco, seguindo pelo galhos até chegar 
+                        em uma das flores de LED na copa da árvore representando o 
+                        espectro atual do usuário. Todo o trajeto percorrido pela 
+                        luz constitui o cultivar daquele sentimento. O modo cooperativo é 
+                        construído de forma simultânea a partir da soma das respostas emocionais, 
+                        permanecendo acesas as últimas 10 emoções captadas pela árvore. 
+                        Os dados também serão armazenados para posterior análise do 
+                        termômetro emocional e comparação com a mudança de localização da árvore.
                     </p>
                 </li>
             </ul>
         </section>
     </main>
+
+    <div class="contact-bar">
+        <a href="https://www.linkedin.com/in/bruno-holanda-502aa9339/" target="_blank" id="linkedin">LinkedIn</a>
+        <a href="https://www.instagram.com/bruno.holanda._/" target="_blank" id="instagram">Instagram</a>
+        <a href="https://github.com/Brno143" target="_blank" id="github">GitHub</a>
+    </div>
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const contactLinks = document.querySelectorAll(".contact-bar a");
+
+            contactLinks.forEach(link => {
+                link.addEventListener("click", () => {
+            
+                    contactLinks.forEach(l => l.classList.remove("active"));
+
+                    
+                    link.classList.add("active");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
