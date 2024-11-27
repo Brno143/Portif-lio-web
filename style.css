@@ -1,4 +1,3 @@
-/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -50,3 +49,33 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+footer {
+    background-color: #1a1a1a; /* Cor de fundo do rodapé */
+    color: #ffffff; /* Cor do texto */
+    text-align: center;
+    padding: 20px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+footer .social-links li a {
+    color: #4CAF50; /* Cor dos links (verde) */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer .social-links li a:hover {
+    color: #FFD700; /* Cor ao passar o mouse (dourado) */
+}
+
